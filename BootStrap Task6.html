@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap Task6</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        #name,#email,#pass,#Hobb{
+            font-size: large;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://github.com/mrrajeev29/BootStrap-Mern-Assignment">
+        <div class="form-group row bg-light" style="border: 1px solid white; padding: 1px; width: 500px; height: 455px; margin-left: 500px; margin-top: 100px;">
+            <h2 id="name">Name</h2>           
+            <div class="input-group has-validation">
+                <input class="form-control is-invalid" style="width: 205px; height: 30px; margin-left: 50px; margin-right: 14%;" for="name" type="text" id="validationServerUsername" required/>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback" style="margin-left: 50px;">
+                    Name is required.
+                </div>
+            </div>
+            <div>
+                <h2 id="email">Email</h2>
+                <div class="input-group has-validation">
+                    <input class="form-control is-invalid" style="width: 222px; height: 30px; margin-left: 50px; margin-right:0%;" for="email" type="email" id="validationServerUsername" required/>
+                    <div id="validationServerUsernameFeedback" class="invalid-feedback" style="margin-left: 50px;">
+                        Email is required.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 id="pass">Password</h2>
+                <div class="input-group has-validation">
+                    <input class="form-control is-invalid" style="width: 222px; height: 30px; margin-left: 50px; margin-right: 6%;" for="pass" type="password" id="validationServerUsername" required/>
+                    <div id="validationServerUsernameFeedback" class="invalid-feedback" style="margin-left: 50px;">
+                        Password is required.
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <h2 id="Hobb">Hobbies</h2>
+                <select style="width: 375px; height: 30px; margin-left: 50px; margin-right: 10%;" for="Hobb" type="text">
+                    <option></option>
+                    <option>Dance</option>
+                    <option>Coding</option>
+                    <option>Singing</option>
+                </select>
+            </div>
+            <button class="btn btn-danger" style="width: 374px; height: 30px; margin-left: 50px;" type="submit"><h6>Submit</h6></button>
+        </div>
+    </form>
+</body>
+</html>
