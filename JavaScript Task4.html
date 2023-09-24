@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task4</title>
+    <style>
+        #i1{
+            margin-top: 10%;
+            width: 30vw;
+            height: 20vh;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="i1">
+        <form>
+            <button onclick="printDate()" style="width: 150px; height: 40px; font-size: large;" type="button">&ensp;show date&ensp;</button>
+            <p id="i2" style="font-size: x-large;"></p>
+        </form>
+    </div>
+    <div style="margin-left: 200px;">
+        <form>
+            <button onclick="printTime()" style="width: 150px; height: 40px; font-size: large;" type="button">&ensp;show Time&ensp;</button>
+            <p id="i3" style="font-size: x-large;"></p> 
+        </form>
+    </div>
+    <script>
+        function printDate()
+        {
+            const obj=new Date();
+            const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            document.getElementById("i2").innerHTML=obj.getDate()+"/"+String(month[obj.getMonth()])+"/"+String(obj.getFullYear());
+        }
+        function printTime()
+        {
+            const obj=new Date();
+            const Day=["Sun","Mon","Tue","Wed","Thur","Fri","Sat"]
+            const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            document.getElementById("i3").innerHTML=Day[obj.getDay()]+" "+String(month[obj.getMonth()])+" "+String(obj.getDate())+" "+String(obj.getHours())+":"+String(obj.getMinutes())+":"+String(obj.getSeconds())+" GMT"+String(obj.getTimezoneOffset())+" (India Standard Time)"
+        }
+    </script>
+</body>
+</html>
