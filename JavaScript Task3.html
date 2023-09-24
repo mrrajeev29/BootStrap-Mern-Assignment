@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaSCript Task3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #i1{
+            box-sizing: border-box;
+            background-color:white;
+            height: 47vh;
+            width: 40vw;
+            border: 1px solid black;
+            margin-left: 400px;
+            margin-top: 100px;
+        }
+        #i2{
+            font-size: x-large;
+        }
+        #mul{
+            margin-left: 40px;
+            margin-top: -5px;
+            border-color:lightblue;
+        }
+        #div{
+            margin-left: 80px;
+            border-color:lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="i1">
+        <br/>
+        <form id="ok">
+            <p id="i2">&ensp;1st Number : &ensp;&ensp;&ensp;<input id="1st" type="number" required/></p>
+            <p id="i2">&ensp;2nd Number : &emsp;<input id="2nd" type="number" required/></p>
+            <br/>
+            <button onclick="multiply()" id="mul" style="border-radius:4px;" type="button">&ensp;Multiply&ensp;</button>
+            <button onclick="divide()" id="div" style="border-radius:4px;" type="button">&emsp;Divide&emsp;</button>
+            <br/>
+            <br/>
+            <p id="i2">&ensp;The Result Is : </p>
+            <p id="demo" style="font-size: large;"></p>
+        </form>
+    </div>
+    <script>
+        function multiply()
+        {
+            var a=document.forms["ok"]["1st"].value;
+            var b=document.forms["ok"]["2nd"].value;
+            if(a=="" || b=="")
+            {
+                alert("Fill the Values.")
+                return false;
+            }
+            document.getElementById("demo").innerHTML=a*b;
+        }
+        function divide(form)
+        {
+            var a=document.forms["ok"]["1st"].value;
+            var b=document.forms["ok"]["2nd"].value;
+            if(a=="" || b=="")
+            {
+                alert("Fill the Values.");
+                return false;
+            }
+            else if(b==0)
+            {
+                alert("Can't divide by Zero.");
+            }
+            else
+            {
+                document.getElementById("demo").innerHTML=a/b;
+            }
+        }
+    </script>
+</body>
+</html>
