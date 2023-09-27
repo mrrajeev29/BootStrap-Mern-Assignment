@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #i1{
+            text-align: center;
+            margin-top: 7%;
+        }
+        #i2{
+            margin-left: -10%;
+        }
+        #out{
+            margin-left: 15%;
+        }
+    </style>
+</head>
+<body>
+    <form id="i1">
+        <h1>Input String : <input id="in" type="text" required/></h1>
+        <br/><br/>
+        <button type="button" onclick="Sort()" class="btn btn-primary btn-lg" id="i2">Sort</button>
+    </form>
+    <br/><br/>
+    <br/>
+    <h1 id="out"></h1>
+    <script>
+        function Sort()
+        {
+            var str=document.forms["i1"]["in"].value;
+            if(str=="")
+            {
+                alert("Input the String.");
+            }
+            else
+            {
+                var arr=str.split("");
+                arr.sort();
+                document.getElementById("out").innerHTML= "Output (Sorted String in alphabetical order) : "+arr.join("");
+            }
+        }
+    </script>
+</body>
+</html>
