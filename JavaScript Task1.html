@@ -37,9 +37,21 @@
         function Reverse()
         {
             var n=document.forms["i1"]["in"].value;
+            if(n=="")
+            {
+                alert("Input the Number");
+            }
             var r=String(n).split("");
-            var k=r.reverse();
-            document.getElementById("ans").innerHTML="Output (Reverse Number) : "+k.join("");
+            if(r[0]=="-")
+            {
+                var k=r.slice(1,r.length).reverse();
+                document.getElementById("ans").innerHTML="Output (Reverse Number) : "+"-"+k.join("");
+            }
+            else
+            {
+                var k=r.reverse();
+                document.getElementById("ans").innerHTML="Output (Reverse Number) : "+k.join("");
+            }
         }
     </script>
 </body>
